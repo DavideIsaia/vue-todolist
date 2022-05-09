@@ -52,8 +52,8 @@ const app = new Vue (
             // compilando il form, aggiunge un elemento alla lista
             addElement() {                
                 const newString = this.newEvent.trim();
-                if (newString.length > 0) {
-                    this.events.push(newString);
+                if (newString.length > 1) {
+                    this.events.push({text:newString, done:false});
                     this.newEvent = "";
                 }
             },
