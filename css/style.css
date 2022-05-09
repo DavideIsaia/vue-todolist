@@ -1,10 +1,56 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* common */
 html {
     background-color: #1b304e;
     color: white;
+}
+
+/* header */
+header img {
+    display: block;
+    width: 10rem;
+    margin: 3rem auto;
+}
+
+/* add event */
+.add-event {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    margin: 0 auto;
+}
+
+input, 
+button {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    font-size: 1.5rem;
+    margin: 1rem 2rem;
+}
+
+/* to do list */
+.todo-list {
+    background-color: #5f737f;
+    width: 65%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightcyan;
+    padding: 0.5rem;
 }

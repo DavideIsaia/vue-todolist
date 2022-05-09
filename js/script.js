@@ -19,10 +19,32 @@ const app = new Vue (
     {
         el : '#root',
         data: {
+            events: [
+                {
+                    text: "Chiamare il dottore",
+                    done: true
+                },
+                {
+                    text: "Fare la spesa",
+                    done: false
+                },
+                {
+                    text: "Andare in palestra",
+                    done: false
+                },
+                {
+                    text: "Revisione auto",
+                    done: true
+                },
+                {
+                    text: "Pagare le bollette",
+                    done: false
+                }
+            ]
             
         },
         methods: {
-            
+
         }
     }
 )
