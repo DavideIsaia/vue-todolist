@@ -60,6 +60,10 @@ li {
     text-decoration: line-through;
 }
 
+li:hover {
+    background-color: #81beb2;
+}
+
 .del {
     background-color: #a70000;
     border-radius: 4px;

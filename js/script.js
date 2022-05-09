@@ -40,12 +40,27 @@ const app = new Vue (
                     text: "Pagare le bollette",
                     done: false
                 }
-            ]
-            
+            ],
+            newEvent: ""            
         },
         methods: {
+            // rimuove un elemento dalla lista
             removeElement(index) {
                 this.events.splice (index, 1)
+            },
+
+            // compilando il form, aggiunge un elemento alla lista
+            addElement() {                
+                const newString = this.newEvent.trim();
+                if (newString.length > 0) {
+                    this.events.push(newString);
+                    this.newEvent = "";
+                }
+            },
+
+            // sbarra l'elemento se è stato fatto (done = true)
+            toggle(index) {
+                this.events[index].done = !this.events[index].done
             }
         }
     }

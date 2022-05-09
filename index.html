@@ -18,17 +18,22 @@
         <main>
             <!-- form per inserire un nuovo elemento alla lista -->
             <div class="add-event">
-                <input type="text" placeholder="Aggiungi un promemoria">
-                <button>Aggiungi</button>
+                <input type="text" 
+                       placeholder="Aggiungi un promemoria"
+                       @keyup.enter="addElement"
+                       v-model="newEvent">
+                <button @click="addElement">Aggiungi</button>
             </div>
             
             <!-- lista cose da fare -->
             <div class="todo-list">
                 <ul>
                     <li v-for="(element, index) in events"
-                        :class="element.done ? 'done' : ''">
+                        :class="element.done ? 'done' : ''"
+                        @click="toggle(index)">
+
                         <span>{{ element.text }}</span>
-                        <div class="del" @click="removeElement(index)" >X</div>
+                        <div class="del" @click="removeElement(index)">X</div>
                     </li>
                 </ul>
             </div>
