@@ -44,7 +44,9 @@ const app = new Vue (
             
         },
         methods: {
-
+            removeElement(index) {
+                this.events.splice (index, 1)
+            }
         }
     }
 )

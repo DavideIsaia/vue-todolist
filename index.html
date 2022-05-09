@@ -26,9 +26,9 @@
             <div class="todo-list">
                 <ul>
                     <li v-for="(element, index) in events"
-                        :class="element.done ? 'done' : ''"                    
-                    >
-                        {{ element.text }}
+                        :class="element.done ? 'done' : ''">
+                        <span>{{ element.text }}</span>
+                        <div class="del" @click="removeElement(index)" >X</div>
                     </li>
                 </ul>
             </div>

@@ -7,6 +7,7 @@
 
 /* common */
 html {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #1b304e;
     color: white;
 }
@@ -55,6 +56,14 @@ li {
     padding: 0.5rem;
 }
 
-.done {
+.done span {
     text-decoration: line-through;
+}
+
+.del {
+    background-color: #a70000;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
 }
