@@ -54,3 +54,7 @@ li {
     border-bottom: 1px solid lightcyan;
     padding: 0.5rem;
 }
+
+.done {
+    text-decoration: line-through;
+}

@@ -16,15 +16,20 @@
         </header>
 
         <main>
+            <!-- form per inserire un nuovo elemento alla lista -->
             <div class="add-event">
                 <input type="text" placeholder="Aggiungi un promemoria">
                 <button>Aggiungi</button>
             </div>
-
+            
+            <!-- lista cose da fare -->
             <div class="todo-list">
                 <ul>
-                    <li>elemento</li>
-                    <li>elemento</li>
+                    <li v-for="(element, index) in events"
+                        :class="element.done ? 'done' : ''"                    
+                    >
+                        {{ element.text }}
+                    </li>
                 </ul>
             </div>
 
